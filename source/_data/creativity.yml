@@ -1,0 +1,62 @@
+- class_name: 于无声处，构建热爱。
+  creativity_list:
+
+    - name: React
+      color: "#D7F3FB"
+      icon: /img/skills/react.svg
+
+    - name: Vue
+      color: "#DDF4E7"
+      icon: /img/skills/vue.svg
+
+    - name: HTML
+      color: "#F9E2D8"
+      icon: /img/skills/html.svg
+
+    - name: CSS3
+      color: "#DCEBFA"
+      icon: /img/skills/css3.svg
+
+    - name: JavaScript
+      color: "#FFF1B8"
+      icon: /img/skills/javascript.svg
+
+    - name: TypeScript
+      color: "#D9E7FA"
+      icon: /img/skills/typescript.svg
+
+    - name: NodeJS
+      color: "#DFF1DF"
+      icon: /img/skills/nodejs.svg
+
+    - name: Python
+      color: "#E2EAF7"
+      icon: /img/skills/python.svg
+
+    - name: Git
+      color: "#F8DDD3"
+      icon: /img/skills/git.svg
+
+    - name: GitHub
+      color: "#E7E7EA"
+      icon: /img/skills/github.svg
+
+    - name: Docker
+      color: "#DCEFFD"
+      icon: /img/skills/docker.svg
+
+    - name: Nginx
+      color: "#DDF3E5"
+      icon: /img/skills/nginx.svg
+
+    - name: Hexo
+      color: "#DCEBFA"
+      icon: /img/skills/hexo.svg
+
+    - name: Java
+      color: "#F7E3D8"
+      icon: /img/skills/java.svg
+
+    - name: OpenAI
+      color: "#DDEFE8"
+      icon: /img/skills/openai.svg

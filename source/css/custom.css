@@ -1,0 +1,111 @@
+:root {
+  --zy-hero-light-text: #2f3a45;
+  --zy-hero-light-nav: #5b6572;
+  --zy-hero-dark-text: rgba(255, 255, 255, 0.88);
+  --zy-hero-dark-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+html,
+body,
+#body-wrap {
+  cursor: url("/img/cursor/default.cur"), auto !important;
+}
+
+/* Clickable elements */
+a,
+button,
+img,
+i,
+svg,
+.card-widget,
+.recent-post-item,
+.article-sort-item,
+#pagination a,
+#nav .menus_item,
+#aside-content .card-info .card-info-social-icons a {
+  cursor: url("/img/cursor/pointer.cur"), pointer !important;
+}
+
+/* Text input controls */
+input,
+textarea,
+select {
+  cursor: text !important;
+}
+
+/* Light mode + white home top image */
+[data-theme="light"] #page-header.full_page #site-title,
+[data-theme="light"] #page-header.full_page #site-subtitle,
+[data-theme="light"] #page-header.full_page #site-subtitle #subtitle {
+  color: var(--zy-hero-light-text) !important;
+  text-shadow: none !important;
+}
+
+[data-theme="light"] #page-header.full_page #site-title {
+  font-weight: 800;
+}
+
+/* Let anzhiyu keep its selector logic, only retune nav tokens for this scene */
+[data-theme="light"] #page-header.full_page #nav {
+  --light-grey: var(--zy-hero-light-nav);
+  --white: var(--zy-hero-light-text);
+}
+
+/* Dark mode restore */
+[data-theme="dark"] #page-header.full_page #site-title,
+[data-theme="dark"] #page-header.full_page #site-subtitle,
+[data-theme="dark"] #page-header.full_page #site-subtitle #subtitle {
+  color: var(--zy-hero-dark-text) !important;
+  text-shadow: var(--zy-hero-dark-shadow) !important;
+}
+
+/* Light mode post top image: improve readability only on article header */
+[data-theme="light"] #page-header.post-bg::before {
+  content: "" !important;
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 26, 34, 0.28) !important;
+  z-index: 2;
+  pointer-events: none;
+}
+
+[data-theme="light"] #page-header.post-bg #post-info {
+  z-index: 3;
+}
+
+[data-theme="light"] #page-header.post-bg #post-info .post-title,
+[data-theme="light"] #page-header.post-bg #post-info #post-meta,
+[data-theme="light"] #page-header.post-bg #post-info #post-meta a,
+[data-theme="light"] #page-header.post-bg #post-firstinfo .meta-firstline,
+  [data-theme="light"] #page-header.post-bg #post-firstinfo .meta-firstline a,
+  [data-theme="light"] #page-header.post-bg #post-firstinfo .article-meta__tags {
+  color: rgba(255, 255, 255, 0.96) !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Footer social bar: normalize icon/avatar visual size */
+#footer_deal {
+  gap: 14px;
+}
+
+#footer_deal .deal_link,
+#footer_deal .footer_mini_logo {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  min-height: 46px;
+}
+
+#footer_deal .deal_link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer_deal .deal_link i,
+#footer_deal .deal_link svg {
+  font-size: 22px !important;
+  width: 22px;
+  height: 22px;
+  line-height: 1;
+}
