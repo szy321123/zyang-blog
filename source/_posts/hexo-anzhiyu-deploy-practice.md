@@ -2,7 +2,7 @@
 title: Hexo 与安知鱼主题完整部署实践
 date: 2026-04-22 18:00:00
 
-cover: /img/covers/posts/hexo-anzhiyu-deploy.png
+cover: /img/covers/posts/cover2.webp
 
 categories:
   - 博客部署

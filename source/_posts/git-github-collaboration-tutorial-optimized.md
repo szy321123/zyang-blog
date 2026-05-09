@@ -1,7 +1,7 @@
 ---
 title: Git 与 GitHub 团队协作实战指南：分支管理、PR 审查与自动部署
 date: 2026-04-23 12:00:00
-cover: /img/covers/posts/git-github-collaboration-tutorial.png
+cover: /img/covers/posts/cover1.webp
 categories:
   - 开发协作
 tags:

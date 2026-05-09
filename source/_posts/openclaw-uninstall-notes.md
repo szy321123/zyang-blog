@@ -2,7 +2,7 @@
 title: OpenClaw 卸载记录
 date: 2026-04-27 15:00:00
 
-cover: /img/covers/posts/openclaw-complete-uninstall-guide.png
+cover: /img/covers/posts/cover5.webp
 
 categories:
   - OpenClaw

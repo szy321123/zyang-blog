@@ -2,7 +2,7 @@
 title: OpenClaw 接入 QQ 与微信记录
 date: 2026-04-29 22:30:00
 
-cover: /img/covers/posts/openclaw-qq-wechat-channel-setup.png
+cover: /img/covers/posts/cover4.webp
 
 categories:
   - OpenClaw

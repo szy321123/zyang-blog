@@ -2,7 +2,7 @@
 title: 我常用的 Linux 命令整理
 date: 2026-04-23 11:20:00
 
-cover: /img/covers/posts/linux-common-commands-tutorial.png
+cover: /img/covers/posts/cover3.webp
 
 categories:
   - Linux运维

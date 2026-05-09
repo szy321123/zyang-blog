@@ -2,7 +2,7 @@
 title: 更换博客字体提升美观度
 date: 2026-05-08 15:30:00
 
-cover: /img/covers/posts/longzhu.png
+cover: /img/covers/posts/cover.webp
 
 categories:
   - 安知鱼主题
