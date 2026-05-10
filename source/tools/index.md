@@ -6,29 +6,17 @@ aside: false
 description: 收藏一些自己常用的小工具与实用页面 ✨
 ---
 
-# 🛠️ 工具箱
+# 工具箱
 
-这里放一些平时写的小工具和常用功能页面。  
-后面也会继续慢慢添加新的工具 ✨
+这里是我整理的实用工具入口。
 
----
+## 图片工具
 
-## 🖼️ 图片工具
+- [图片转 WebP（入口 1）](/image-converter/)
+- [图片转 WebP（入口 2）](/image-converter/index.html)
 
-### [图片转 WebP](/image-converter/)
+如果上面链接在当前页被拦截，请使用下面这个按钮：
 
-一个支持图片转 WebP 的在线小工具。  
-支持快速压缩图片、减小体积，适合博客图片优化与网页资源处理。
-
----
-
-## 🌱 页面说明
-
-这里会持续更新一些：
-
-- 图片工具
-- 前端小工具
-- 开发辅助工具
-- 建站相关功能
-
-以后都会慢慢整理到这里。
+<a href="javascript:void(0);" onclick="window.location.href='/image-converter/';" style="display:inline-block;padding:10px 14px;border:1px solid var(--style-border-color, #d0d7de);border-radius:10px;text-decoration:none;">
+  打开 WebP 转换器
+</a>

@@ -1,0 +1,8 @@
+{
+  "baseUrl": "https://your-openlist-domain.com",
+  "path": "/downloads",
+  "password": "",
+  "token": "",
+  "perPage": 0,
+  "refresh": true
+}

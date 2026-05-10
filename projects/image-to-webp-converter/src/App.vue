@@ -85,16 +85,16 @@
         <div class="footer-content">
           <div class="footer-section">
             <h3>功能特性</h3>
-            <p>支持 JPG、PNG、GIF、BMP、TIFF、SVG、HEIC、RAW 格式转换为 WebP</p>
+            <p>支持 JPG、PNG、GIF、BMP、TIFF、SVG、HEIC、RAW 等格式，批量转换为 WebP。</p>
           </div>
           <div class="footer-divider"></div>
           <div class="footer-section">
             <h3>技术优势</h3>
-            <p>纯前端处理 · 安全隐私 · 无需上传服务器 · 响应式设计</p>
+            <p>纯前端本地处理 · 不上传服务器 · 注重隐私安全 · 适配手机与桌面端。</p>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>© 2024 Image to WebP Converter. Powered by AnZhiYu Theme.</p>
+          <p>© 2026 汤圆是只乳白 · ZYang 的图片工具箱</p>
         </div>
       </div>
     </footer>
