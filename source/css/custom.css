@@ -110,102 +110,6 @@ select {
   line-height: 1;
 }
 
-/* Mobile polish for Hexo + AnZhiYu (non-desktop-impacting) */
-@media screen and (max-width: 768px) {
-  /* Keep hamburger menu prominent and reduce right-icon crowding */
-  #page-header #nav #nav-right #randomPost_button,
-  #page-header #nav #nav-right #center-console,
-  #page-header #nav #nav-right #center-console + label {
-    display: none !important;
-  }
-
-  #page-header #nav #nav-right #search-button,
-  #page-header #nav #nav-right #toggle-menu {
-    display: flex !important;
-  }
-
-  #page-header #nav #nav-right {
-    gap: 6px;
-  }
-
-  /* Hero text/layout balance on small screens */
-  #page-header.full_page #site-info {
-    top: 16.5%;
-    width: min(92vw, 420px);
-    padding: 0 12px;
-  }
-
-  #page-header.full_page #site-title {
-    line-height: 1.2;
-    word-break: break-word;
-  }
-
-  #page-header.full_page #site-subtitle,
-  #page-header.full_page #site-subtitle #subtitle {
-    margin-top: 12px;
-    line-height: 1.5;
-  }
-
-  /* Prevent lottie from overlapping title/subtitle and overfilling */
-  #page-header.full_page .hero-lottie-wrap {
-    width: min(80vw, 320px);
-    bottom: 3%;
-    transform: translate(-50%, 28px);
-  }
-
-  /* Card and content flow: one-column, no horizontal overflow */
-  #content-inner,
-  .layout,
-  #recent-posts {
-    overflow-x: hidden;
-  }
-
-  #recent-posts > .recent-post-item,
-  .topGroup .recent-post-item,
-  #anzhiyu-footer .footer-group {
-    width: 100%;
-    min-width: 0;
-  }
-
-  #recent-posts > .recent-post-item .post_cover img,
-  .topGroup .recent-post-item .post_cover img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  /* Footer readability: keep links and social channels, reduce crowding */
-  #footer-wrap #anzhiyu-footer {
-    padding: 0 12px;
-    gap: 10px 16px;
-    justify-content: flex-start;
-  }
-
-  #footer-wrap #anzhiyu-footer .footer-group {
-    width: calc(50% - 8px);
-  }
-
-  #footer-wrap #anzhiyu-footer .footer-item {
-    max-width: none;
-    line-height: 1.35;
-  }
-
-  #footer-wrap #footer-bar .footer-bar-links {
-    gap: 8px;
-  }
-
-  #footer-wrap #footer-bar .footer-bar-left,
-  #footer-wrap #footer-bar .footer-bar-right {
-    width: 100%;
-    justify-content: center;
-  }
-
-  /* Performance: disable dark particle canvas and lottie floating motion on mobile */
-  [data-theme="dark"] #universe,
-  [data-theme="dark"] canvas#universe {
-    display: none !important;
-  }
-}
 
 /* =========================
    作者卡片
@@ -322,4 +226,15 @@ select {
   transform: translateY(-3px) scale(1.08);
 
   background: rgba(255,255,255,.28);
+}
+
+/* Mobile sidebar menu: hide top-level icons, keep child icons */
+@media screen and (max-width: 768px) {
+  #sidebar #sidebar-menus .menus_items > .menus_item > .site-page > i:first-child {
+    display: none !important;
+  }
+
+  #sidebar #sidebar-menus .menus_items > .menus_item > .site-page {
+    padding-left: 0 !important;
+  }
 }

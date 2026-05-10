@@ -1,20 +1,20 @@
 menu:
-  首页: / || fas fa-home
+  首页||fas fa-home||hide:
+    随便逛逛: javascript:toRandomPost() || fas fa-shuffle
+    最新文章: /archives/ || fas fa-clock-rotate-left
 
   文章||fas fa-pen-nib||hide:
     分类: /categories/ || fas fa-folder-open
+    留言板: /comments/ || fas fa-comments
 
   资源||fas fa-box-open||hide:
     工具: /tools/ || fas fa-wrench
     分享: /sites/ || fas fa-gem
-
-  下载: /downloads/ || fas fa-download
-  留言板: /comments/ || fas fa-comments
+    下载: /downloads/ || fas fa-download
 
   关于||fas fa-user||hide:
     我的设备: /equipment/ || fas fa-laptop
     关于我: /about/ || fas fa-circle-info
-    随便逛逛: javascript:toRandomPost() || fas fa-shuffle
   # 闲言碎语: /essay/ || anzhiyu-icon-lightbulb
   # 友链:
   #   友人帐: /link/ || anzhiyu-icon-link

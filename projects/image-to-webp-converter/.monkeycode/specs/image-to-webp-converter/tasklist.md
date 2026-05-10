@@ -1,0 +1,142 @@
+# 图片格式转 WebP 实施计划
+
+- [x] 1. 创建项目结构和基础配置
+   - [x] 1.1 初始化项目目录结构
+     - 创建 src 目录存放源代码
+     - 创建 public 目录存放静态资源
+     - 创建 components 目录存放 Vue 组件
+   - [x] 1.2 创建 package.json 配置文件
+     - 配置项目名称、版本等基本信息
+     - 添加 Vite 相关依赖
+     - 添加开发和生产脚本
+   - [x] 1.3 创建 Vite 配置文件 vite.config.ts
+     - 配置开发服务器端口
+     - 配置 Hexo 博客集成模式
+     - 配置 allowedHosts 支持 *.monkeycode-ai.online
+
+- [x] 2. 实现数据模型和类型定义
+  - [x] 2.1 创建 TypeScript 类型定义文件 src/types/index.ts
+    - 定义 ImageData 接口（包含 id、file、name、size、format、width、height、status 等属性）
+    - 定义 ConversionSettings 接口（包含 quality、targetWidth、targetHeight、maintainAspectRatio）
+    - 定义 ConversionResult 接口（包含 originalSize、convertedSize、compressionRate、blob、duration）
+    - 定义 ConversionStats 接口（包含 totalFiles、completedFiles、failedFiles、totalOriginalSize、totalConvertedSize、averageCompressionRate）
+    - 定义 ConversionError 枚举类型
+  - [x] 2.2 创建工具函数 src/utils/image.ts
+    - 实现格式检测函数 detectImageFormat()
+    - 实现尺寸计算函数 calculateDimensions()
+    - 实现文件大小格式化函数 formatFileSize()
+
+- [x] 3. 实现核心转换引擎
+  - [x] 3.1 创建转换引擎 src/core/converter.ts
+    - 实现 convert() 函数使用 Canvas API 转换图片为 WebP
+    - 实现质量参数控制（0.01-1.0）
+    - 实现尺寸调整功能
+    - 实现转换进度回调
+  - [x] 3.2 创建批量转换管理器 src/core/batchManager.ts
+    - 实现添加文件到转换队列
+    - 实现并发控制（最多同时转换 3 个）
+    - 实现取消单个转换
+    - 实现取消全部转换
+  - [ ] 3.3 实现特殊格式支持
+    - 添加 HEIC/HEIF 格式解码支持（使用 heic2any 库）
+    - 添加 SVG 栅格化处理
+    - 添加 RAW 格式基础支持
+
+- [x] 4. 实现文件上传组件
+  - [x] 4.1 创建上传组件 src/components/FileUploader.vue
+    - 实现拖拽上传区域
+    - 实现点击选择文件
+    - 实现多文件选择支持
+    - 实现文件格式验证和错误提示
+  - [x] 4.2 添加 AnZhiYu 主题样式
+    - 导入 AnZhiYu 主题 CSS 变量
+    - 实现浅色/深色主题自动切换
+    - 实现响应式布局
+
+- [x] 5. 实现图片列表和预览组件
+  - [x] 5.1 创建图片列表组件 src/components/ImageList.vue
+    - 实现图片缩略图显示
+    - 实现文件名和大小显示
+    - 实现移除单张图片功能
+    - 实现转换状态指示器（待处理/转换中/已完成/失败）
+  - [x] 5.2 创建预览对比组件 src/components/PreviewModal.vue
+    - 实现原图和转换后图片并排对比
+    - 实现图片详细信息显示（尺寸、格式、大小）
+    - 实现放大查看功能
+    - 实现滑动对比效果
+
+- [x] 6. 实现转换设置组件
+  - [x] 6.1 创建设置面板组件 src/components/SettingsPanel.vue
+    - 实现质量调节滑块（1-100%）
+    - 实现质量数值实时显示
+    - 实现尺寸调整输入框（宽度和高度）
+    - 实现保持宽高比切换开关
+    - 实现重置为默认值功能
+
+- [x] 7. 实现统计和下载组件
+  - [x] 7.1 创建统计面板组件 src/components/StatisticsPanel.vue
+    - 实现总文件数显示
+    - 实现原始总大小和转换后总大小显示
+    - 实现平均压缩率计算和显示
+    - 实现节省空间显示
+  - [x] 7.2 创建下载组件 src/components/DownloadPanel.vue
+    - 实现单张图片下载
+    - 实现批量打包下载（使用 JSZip）
+    - 实现下载进度显示
+    - 实现失败文件重新下载
+
+- [x] 8. 实现主应用界面
+  - [x] 8.1 创建主应用组件 src/App.vue
+    - 实现整体页面布局
+    - 集成所有子组件
+    - 实现全局状态管理
+    - 实现主题切换逻辑
+  - [x] 8.2 创建主入口文件 src/main.ts
+    - 初始化 Vue 应用
+    - 注册全局组件
+    - 导入全局样式
+
+- [ ] 9. 实现 Hexo 博客集成
+  - [ ] 9.1 创建 Hexo 集成入口文件 src/hexo-entry.ts
+    - 导出可嵌入 Hexo 页面的初始化函数
+    - 支持 CDN 方式加载
+  - [ ] 9.2 创建独立构建配置 vite.config.hexo.ts
+    - 配置 UMD/IIFE 格式输出
+    - 配置 CDN 依赖外部化
+  - [ ] 9.3 编写 Hexo 集成文档 docs/hexo-integration.md
+    - 说明如何在 Hexo 博客中添加页面
+    - 说明如何配置主题和样式
+
+- [x] 10. 添加全局样式和主题
+  - [x] 10.1 创建样式文件 src/styles/main.css
+    - 定义 CSS 变量（浅色和深色主题）
+    - 实现 AnZhiYu 主题兼容样式
+    - 实现响应式布局样式
+  - [x] 10.2 创建主题切换工具 src/utils/theme.ts
+    - 实现系统主题检测
+    - 实现主题切换函数
+    - 实现主题持久化
+
+- [x] 11. 检查点 - 确保所有功能正常工作
+  - 运行开发服务器测试所有功能，如有疑问请询问用户
+
+- [ ] 12. 优化和错误处理
+  - [ ] 12.1 添加错误边界组件 src/components/ErrorBoundary.vue
+    - 捕获和显示组件错误
+    - 提供重试机制
+  - [ ] 12.2 优化大文件处理
+    - 添加文件大小警告
+    - 实现分块处理超大图片
+  - [ ] 12.3 添加性能优化
+    - 实现 Web Worker 进行转换避免阻塞 UI
+    - 实现图片懒加载
+    - 优化内存使用
+
+- [x] 13. 编写项目文档
+  - [x] 13.1 创建 README.md
+    - 项目介绍和功能说明
+    - 安装和运行说明
+    - 部署指南
+  - [ ] 13.2 创建使用说明 docs/usage.md
+    - 详细的功能使用教程
+    - 常见问题解答
