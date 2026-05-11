@@ -355,13 +355,13 @@ comments:
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
   lazyload: false
-  count: false # Display comment count in post's top_img
+  count: true # Display comment count in post's top_img
   card_post_count: false # Display comment count in Home Page
 
   twikoo:
     envId: https://twikoo-steel-two.vercel.app
     region:
-    visitor: true
+    visitor: false
 # valine
 # https://valine.js.org
 valine:
@@ -402,7 +402,7 @@ waline:
 twikoo:
   envId: https://twikoo-steel-two.vercel.app
   region:
-  visitor: false
+  visitor: true
   option:
 
 # Artalk
@@ -1332,7 +1332,7 @@ inject:
   bottom:
     - <script src="/js/custom-preloader.js"></script>
     - <script src="/js/hero-lottie.js"></script>
-    - <script src="/js/author-social.js"></script>
+    - <script src="/js/welcome-card.js"></script>
     
 
 # CDN

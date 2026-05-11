@@ -6,95 +6,75 @@ aside: false
 description: 收藏一些平时常用、觉得不错的网站与工具 ✨
 ---
 
-<div class="zy-sites">
-  <div class="zy-sites-hero">
-    <h1>资源导航</h1>
-    <p>收录我日常使用的网站与工具，按用途整理，持续更新。</p>
+<div class="zy-share-page">
+  <div class="zy-share-head">
+    <h1>资源分享</h1>
+    <p>按分类整理常用网站，持续更新。</p>
   </div>
 
-  <section class="zy-sites-section">
-    <h2>设计资源</h2>
-    <div class="zy-sites-grid">
-      <a class="zy-site-card" href="https://worldvectorlogo.com/" target="_blank" rel="noopener">
-        <h3>World Vector Logo</h3>
-        <p>品牌 Logo 矢量资源下载，支持 SVG/PNG。</p>
-      </a>
-      <a class="zy-site-card" href="https://lottiefiles.com/" target="_blank" rel="noopener">
-        <h3>LottieFiles</h3>
-        <p>Lottie 动画资源站，适合网页 JSON 动效。</p>
-      </a>
-      <a class="zy-site-card" href="https://www.awwwards.com/" target="_blank" rel="noopener">
-        <h3>Awwwards</h3>
-        <p>优秀网页作品收录站，获取设计灵感。</p>
-      </a>
-      <a class="zy-site-card" href="https://uiverse.io/" target="_blank" rel="noopener">
-        <h3>UIverse</h3>
-        <p>开源 UI 组件社区，支持快速复制使用。</p>
-      </a>
-    </div>
-  </section>
+  <div class="zy-share-filters" id="zy-share-filters">
+    <button class="is-active" data-filter="all">全部</button>
+    <button data-filter="图片">图片</button>
+    <button data-filter="AI">AI</button>
+    <button data-filter="CSS">CSS</button>
+    <button data-filter="组件">组件</button>
+    <button data-filter="网站集">网站集</button>
+    <button data-filter="学习">学习</button>
+  </div>
 
-  <section class="zy-sites-section">
-    <h2>前端与效率</h2>
-    <div class="zy-sites-grid">
-      <a class="zy-site-card" href="https://magicui.design/" target="_blank" rel="noopener">
-        <h3>Magic UI</h3>
-        <p>React + Tailwind 动画组件库。</p>
-      </a>
-      <a class="zy-site-card" href="https://sweezy-cursors.com/" target="_blank" rel="noopener">
-        <h3>Sweezy Cursors</h3>
-        <p>创意鼠标样式资源库。</p>
-      </a>
-      <a class="zy-site-card" href="https://qwerty.kaiyi.cool/" target="_blank" rel="noopener">
-        <h3>Qwerty Learner</h3>
-        <p>打字与单词练习工具。</p>
-      </a>
-      <a class="zy-site-card" href="https://tool.lu/" target="_blank" rel="noopener">
-        <h3>聚合工具</h3>
-        <p>开发、设计、效率工具导航。</p>
-      </a>
-    </div>
-  </section>
-
-  <section class="zy-sites-section">
-    <h2>图片与文档处理</h2>
-    <div class="zy-sites-grid">
-      <a class="zy-site-card" href="https://www.ilovepdf.com/zh-cn" target="_blank" rel="noopener">
-        <h3>iLovePDF</h3>
-        <p>PDF 合并、拆分、压缩与格式转换。</p>
-      </a>
-      <a class="zy-site-card" href="https://www.iloveimg.com/zh-cn" target="_blank" rel="noopener">
-        <h3>iLoveIMG</h3>
-        <p>图片压缩、裁剪、水印、尺寸处理。</p>
-      </a>
-      <a class="zy-site-card" href="https://tool.yysuni.com/" target="_blank" rel="noopener">
-        <h3>YYsuni 图片工具箱</h3>
-        <p>聚合型图片处理工具站。</p>
-      </a>
-      <a class="zy-site-card" href="/image-converter/">
-        <h3>图片转 WebP（本站）</h3>
-        <p>本站部署的 WebP 批量转换工具。</p>
-      </a>
-    </div>
-  </section>
-
-  <section class="zy-sites-section">
-    <h2>开发运维与学习</h2>
-    <div class="zy-sites-grid">
-      <a class="zy-site-card" href="https://kejilion.pro/" target="_blank" rel="noopener">
-        <h3>Kejilion</h3>
-        <p>Linux 运维一键脚本与部署指南。</p>
-      </a>
-      <a class="zy-site-card" href="https://saduck.top/" target="_blank" rel="noopener">
-        <h3>SaDuck</h3>
-        <p>学习与知识整理站点。</p>
-      </a>
-      <a class="zy-site-card" href="https://kms.cx/" target="_blank" rel="noopener">
-        <h3>KMS.CX</h3>
-        <p>系统相关工具站点。</p>
-      </a>
-    </div>
-  </section>
-
-  <p class="zy-sites-update">最后更新：2026-05-10</p>
+  <div class="zy-share-grid" id="zy-share-grid">
+    <article class="zy-share-card" data-tags="图片">
+      <h3>iLoveIMG</h3><p>免费图片处理网站，压缩体验很好。</p>
+      <div class="zy-share-meta"><span>图片</span><a href="https://www.iloveimg.com/zh-cn" target="_blank" rel="noopener">访问</a></div>
+    </article>
+    <article class="zy-share-card" data-tags="图片">
+      <h3>TinyPNG</h3><p>经典图片压缩工具，适合日常快速处理。</p>
+      <div class="zy-share-meta"><span>图片</span><a href="https://tinypng.com/" target="_blank" rel="noopener">访问</a></div>
+    </article>
+    <article class="zy-share-card" data-tags="图片,AI">
+      <h3>removebg</h3><p>AI 抠图工具，界面简洁，处理快。</p>
+      <div class="zy-share-meta"><span>图片 / AI</span><a href="https://www.remove.bg/zh" target="_blank" rel="noopener">访问</a></div>
+    </article>
+    <article class="zy-share-card" data-tags="CSS">
+      <h3>Neumorphism</h3><p>新拟态风格在线生成器，灵感不错。</p>
+      <div class="zy-share-meta"><span>CSS</span><a href="https://neumorphism.io/" target="_blank" rel="noopener">访问</a></div>
+    </article>
+    <article class="zy-share-card" data-tags="CSS,组件">
+      <h3>Uiverse</h3><p>高质量交互组件集合，更新活跃。</p>
+      <div class="zy-share-meta"><span>CSS / 组件</span><a href="https://uiverse.io/" target="_blank" rel="noopener">访问</a></div>
+    </article>
+    <article class="zy-share-card" data-tags="组件">
+      <h3>Magic UI</h3><p>现代 UI 组件库，视觉表现很强。</p>
+      <div class="zy-share-meta"><span>组件</span><a href="https://magicui.design/" target="_blank" rel="noopener">访问</a></div>
+    </article>
+    <article class="zy-share-card" data-tags="网站集">
+      <h3>Awwwards</h3><p>优秀网站案例聚合，找灵感必备。</p>
+      <div class="zy-share-meta"><span>网站集</span><a href="https://www.awwwards.com/" target="_blank" rel="noopener">访问</a></div>
+    </article>
+    <article class="zy-share-card" data-tags="学习">
+      <h3>Qwerty Learner</h3><p>练打字 + 背单词，效率很高。</p>
+      <div class="zy-share-meta"><span>学习</span><a href="https://qwerty.kaiyi.cool/" target="_blank" rel="noopener">访问</a></div>
+    </article>
+    <article class="zy-share-card" data-tags="图片">
+      <h3>图片转 WebP（本站）</h3><p>本地无上传的 WebP 转换工具。</p>
+      <div class="zy-share-meta"><span>图片</span><a href="/image-converter/">访问</a></div>
+    </article>
+  </div>
 </div>
+
+<script>
+(() => {
+  const root = document.querySelector('.zy-share-page');
+  if (!root) return;
+  const filters = [...root.querySelectorAll('#zy-share-filters button')];
+  const cards = [...root.querySelectorAll('.zy-share-card')];
+  const setFilter = (tag) => {
+    filters.forEach((b) => b.classList.toggle('is-active', b.dataset.filter === tag));
+    cards.forEach((c) => {
+      const tags = c.dataset.tags || '';
+      c.style.display = tag === 'all' || tags.includes(tag) ? '' : 'none';
+    });
+  };
+  filters.forEach((b) => b.addEventListener('click', () => setFilter(b.dataset.filter)));
+})();
+</script>

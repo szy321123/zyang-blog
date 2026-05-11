@@ -1,0 +1,51 @@
+- class_name: 好物
+  description: 实物装备推荐
+  tip: 跟 ZYang 一起享受科技带来的乐趣
+  top_background: /img/covers/posts/cover7.webp
+  good_things:
+    - title: 生产力
+      description: 提升自己生产效率的硬件设备
+      equipment_list:
+        - name: ROG 魔霸新锐 2022
+          specification: 游戏本 · 主力开发机
+          description: 目前最核心的生产力设备，负责写代码、跑环境、处理多任务和偶尔的高性能需求。性能给得很足，适合长时间折腾项目。
+          image: /img/devices/魔霸新锐2022.png
+          link: https://rog.asus.com.cn/laptops/rog-strix/rog-strix-g15-2022-series/
+        - name: iPad Air 4
+          specification: 平板 · 阅读 / 笔记
+          description: 阅读文档、看课件、轻量批注都很顺手。它更像一块随手拿起的第二屏，适合把资料和主力电脑分开。
+          image: /img/devices/ipad_air_4-removebg-preview.png
+          link: https://support.apple.com/kb/SP828?locale=zh_CN
+
+    - title: 移动出行
+      description: 日常通信、拍照、音乐和外出场景的高频设备
+      equipment_list:
+        - name: iPhone 13
+          specification: 手机 · 日常主力
+          description: 负责通信、拍照、支付和日常信息流，系统稳定、拍照省心，是随身设备里最不需要操心的那一个。
+          image: /img/devices/苹果13-removebg-preview.png
+          link: https://support.apple.com/kb/SP851?locale=zh_CN
+        - name: 魅族 20
+          specification: 手机 · 安卓体验机
+          description: 用来保留 Android 侧的体验和折腾空间，也适合做双平台测试。轻快的系统和直屏手感很适合日常把玩。
+          image: /img/devices/meizu20-removebg-preview.png
+          link: https://www.meizu.com/meizu20
+        - name: OPPO Enco Free4
+          specification: 耳机 · 无线降噪
+          description: 通勤、会议和刷视频都很常用，佩戴轻松，降噪够用。外出时能把环境音压下去，让注意力更容易回来。
+          image: /img/devices/oppo_enco_free_4-removebg-preview.png
+          link: https://www.oppo.com/cn/headphones/
+
+    - title: 桌面外设
+      description: 每天接触最多的输入设备，手感和响应决定使用频率
+      equipment_list:
+        - name: PMO P75
+          specification: 键盘 · 75 配列
+          description: 兼顾功能键和桌面空间，适合长时间输入。相比全尺寸更清爽，也比小配列少一些组合键负担。
+          image: /img/devices/pmo_p75-removebg-preview.png
+          link: https://search.jd.com/Search?keyword=PMO%20P75
+        - name: 多彩 M800 Ultra
+          specification: 鼠标 · 轻量无线
+          description: 轻量、响应快，长时间移动也不累。它是桌面上最容易被忽略但最影响手感的设备之一。
+          image: /img/devices/多彩m800ultra-removebg-preview.png
+          link: https://search.jd.com/Search?keyword=%E5%A4%9A%E5%BD%A9%20M800%20Ultra
