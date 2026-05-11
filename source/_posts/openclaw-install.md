@@ -9,7 +9,7 @@ categories:
 cover: /img/covers/posts/cover8.webp
 description: 使用 openclawctl 一键部署 OpenClaw（小龙虾），记录安装、运行、API 配置与模型接入过程。
 keywords: OpenClaw,AI Agent
-top_img: false
+top_img: /img/covers/posts/cover8.webp
 ---
 
 最近重新部署了一次 OpenClaw。
