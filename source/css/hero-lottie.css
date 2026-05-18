@@ -24,7 +24,7 @@
   position: absolute;
   left: 50%;
   bottom: 6%;
-  width: min(86vw, 460px);
+  width: min(88vw, 520px);
   transform: translateX(-50%);
   z-index: 1;
   pointer-events: none;
@@ -60,7 +60,7 @@
   }
 
   #page-header.full_page .hero-lottie-wrap {
-    width: min(84vw, 360px);
+    width: min(88vw, 400px);
     bottom: 8%;
   }
 }
