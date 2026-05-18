@@ -102,6 +102,27 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: anzhiyu
 
+# Envelope-style message board (AnZhiYu docs)
+# Plugin: hexo-butterfly-envelope
+envelope_comment:
+  enable: true
+  custom_pic:
+    cover: /img/card/cover.webp
+    line: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/line.png
+    beforeimg: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/before.png
+    afterimg: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/after.png
+  message:
+    - 留言板已开启，欢迎留下你的想法。
+    - 你可以分享建议、问题，或者路过打个招呼。
+    - 我会认真阅读并尽量及时回复。
+  bottom: 感谢你的来访与留言，祝你今天也有好心情。
+  path: comments
+  front_matter:
+    title: 留言板
+    comments: true
+    top_img: false
+    type: envelope
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:

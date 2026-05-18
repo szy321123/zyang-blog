@@ -1,4 +1,6 @@
 (() => {
+  "use strict";
+
   const CARD_ID = "zy-welcome-card";
   const BLOGGER = {
     city: "安徽·芜湖",
@@ -55,6 +57,21 @@
     return Math.round(R * c);
   }
 
+  function normalizeText(value, fallback) {
+    if (typeof value !== "string") return fallback;
+    const text = value.trim();
+    return text || fallback;
+  }
+
+  function setMaskedValue(el, prefix, value) {
+    if (!el) return;
+    const span = document.createElement("span");
+    span.className = "zy-ip-blur";
+    span.textContent = value;
+    el.textContent = prefix;
+    el.appendChild(span);
+  }
+
   async function fetchIpInfo() {
     const endpoints = [
       "https://ipapi.co/json/",
@@ -62,13 +79,17 @@
     ];
 
     for (const url of endpoints) {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 4500);
       try {
-        const res = await fetch(url, { method: "GET" });
+        const res = await fetch(url, { method: "GET", signal: controller.signal });
         if (!res.ok) continue;
         const data = await res.json();
         if (data) return data;
-      } catch (e) {
+      } catch (_) {
         // try next endpoint
+      } finally {
+        clearTimeout(timer);
       }
     }
     return null;
@@ -86,7 +107,7 @@
     if (!data) {
       locEl.textContent = "📍 地区信息获取失败，请稍后再试。";
       disEl.textContent = `🧭 与博主（${BLOGGER.city}）的距离暂不可用。`;
-      ipEl.innerHTML = '🌐 你的网络 IP：<span class="zy-ip-blur">未知</span>';
+      setMaskedValue(ipEl, "🌐 你的网络 IP：", "未知");
       return;
     }
 
@@ -94,7 +115,7 @@
     const region = data.region || data.prov || "";
     const country = data.country_name || data.country || "";
     const org = data.org || data.isp || "";
-    const ip = data.ip || "未知";
+    const ip = normalizeText(data.ip, "未知");
     const lat = Number(data.latitude ?? data.lat);
     const lon = Number(data.longitude ?? data.lon);
 
@@ -108,7 +129,7 @@
     } else {
       disEl.textContent = `🧭 与博主（${BLOGGER.city}）的距离暂不可用。`;
     }
-    ipEl.innerHTML = `🌐 你的网络 IP：<span class="zy-ip-blur">${ip}</span>`;
+    setMaskedValue(ipEl, "🌐 你的网络 IP：", ip);
   }
 
   async function mountWelcomeCard() {

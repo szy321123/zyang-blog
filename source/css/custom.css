@@ -146,456 +146,45 @@ select {
   }
 }
 
-/* Advanced download center (AnZhiYu visual style) */
-.zy-download-center {
-  position: relative;
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 16px;
-  border-radius: 26px;
-  background:
-    radial-gradient(circle at 18% 12%, rgba(124, 140, 255, 0.22), transparent 36%),
-    radial-gradient(circle at 84% 18%, rgba(99, 214, 255, 0.16), transparent 34%),
-    radial-gradient(circle at 50% 120%, rgba(87, 110, 255, 0.18), transparent 44%),
-    linear-gradient(160deg, rgba(16, 20, 38, 0.9), rgba(20, 24, 46, 0.84));
-  border: 1px solid rgba(195, 206, 255, 0.18);
-  box-shadow: 0 22px 48px rgba(7, 11, 25, 0.42);
-  overflow: hidden;
-}
-
-.zy-download-center::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(2px 2px at 16% 22%, rgba(255, 255, 255, 0.45) 50%, transparent 60%),
-    radial-gradient(2px 2px at 72% 28%, rgba(255, 255, 255, 0.35) 50%, transparent 60%),
-    radial-gradient(1.5px 1.5px at 40% 56%, rgba(255, 255, 255, 0.36) 50%, transparent 60%),
-    radial-gradient(1.6px 1.6px at 86% 72%, rgba(255, 255, 255, 0.3) 50%, transparent 60%),
-    radial-gradient(1.4px 1.4px at 22% 80%, rgba(255, 255, 255, 0.24) 50%, transparent 60%);
-  pointer-events: none;
-}
-
-.zy-download-hero,
-.zy-download-groups {
-  position: relative;
-  z-index: 1;
-}
-
-.zy-download-hero {
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(190, 202, 255, 0.18);
-  border-radius: 20px;
-  background: rgba(18, 23, 43, 0.45);
-  padding: 18px 20px;
-}
-
-.zy-download-hero h1 {
-  margin: 0 0 8px;
-  color: rgba(244, 247, 255, 0.95);
-  font-size: 1.9rem;
-}
-
-.zy-download-hero p {
-  margin: 0;
-  color: rgba(214, 223, 255, 0.82);
-}
-
-.zy-download-groups {
-  margin-top: 20px;
-  display: grid;
-  gap: 18px;
-}
-
-.zy-download-group {
-  border: 1px solid rgba(190, 202, 255, 0.16);
-  border-radius: 20px;
-  background: rgba(15, 20, 37, 0.46);
-  padding: 16px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-.zy-download-group h2 {
-  margin: 2px 4px 12px;
-  color: rgba(241, 245, 255, 0.92);
-  font-size: 1.1rem;
-}
-
-.zy-download-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 14px;
-}
-
-.zy-download-card {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 16px;
-  border-radius: 20px;
-  border: 1px solid rgba(193, 204, 255, 0.24);
-  background: rgba(24, 30, 52, 0.42);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
-}
-
-.zy-download-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(142, 173, 255, 0.74);
-  box-shadow: 0 14px 28px rgba(49, 80, 190, 0.26), 0 0 0 1px rgba(128, 160, 255, 0.26);
-}
-
-.zy-download-icon {
-  width: 42px;
-  height: 42px;
-  flex: 0 0 42px;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(240, 245, 255, 0.95);
-  font-size: 1.18rem;
-  border: 1px solid rgba(180, 195, 255, 0.38);
-  box-shadow: 0 0 14px rgba(126, 152, 255, 0.24);
-}
-
-.zy-download-meta {
-  min-width: 0;
-  flex: 1;
-}
-
-.zy-download-meta h3 {
-  margin: 0 0 4px;
-  font-size: 1.04rem;
-  font-weight: 700;
-  line-height: 1.35;
-  color: rgba(245, 248, 255, 0.95);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.zy-download-meta p {
-  margin: 0;
-  color: rgba(202, 213, 248, 0.62);
-  font-size: .82rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.zy-download-btn {
-  text-decoration: none !important;
-  color: #fff !important;
-  font-size: .84rem;
-  font-weight: 600;
-  padding: 9px 14px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #5b76ff 0%, #52c7ff 52%, #45e3d9 100%);
-  border: 1px solid rgba(225, 238, 255, 0.45);
-  box-shadow: 0 8px 16px rgba(72, 123, 255, 0.34);
-  white-space: nowrap;
-  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
-}
-
-.zy-download-btn:hover {
-  transform: translateY(-1px);
-  filter: brightness(1.04);
-  box-shadow: 0 10px 20px rgba(72, 123, 255, 0.4), 0 0 16px rgba(91, 118, 255, 0.4);
-}
-
-.zy-icon-windows {
-  background: linear-gradient(145deg, rgba(92, 148, 255, 0.44), rgba(79, 214, 255, 0.32));
-  box-shadow: 0 0 14px rgba(94, 165, 255, 0.3);
-}
-
-.zy-icon-ios {
-  background: linear-gradient(145deg, rgba(154, 166, 193, 0.44), rgba(217, 227, 255, 0.22));
-  box-shadow: 0 0 14px rgba(186, 198, 230, 0.28);
-}
-
-.zy-icon-android {
-  background: linear-gradient(145deg, rgba(118, 221, 144, 0.4), rgba(75, 192, 163, 0.3));
-  box-shadow: 0 0 14px rgba(101, 216, 157, 0.3);
-}
-
-.zy-download-empty {
-  border-radius: 16px;
-  padding: 14px;
-  text-align: center;
-  color: rgba(205, 216, 248, 0.7);
-  background: rgba(22, 28, 50, 0.45);
-  border: 1px dashed rgba(183, 196, 250, 0.26);
-}
-
-@media screen and (max-width: 768px) {
-  .zy-download-center {
-    padding: 10px;
-    border-radius: 20px;
-  }
-
-  .zy-download-hero h1 {
-    font-size: 1.55rem;
-  }
-
-  .zy-download-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Sites page clean layout */
-.zy-sites {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-
-.zy-sites-hero {
-  padding: 18px 20px;
-  border: var(--style-border-always);
-  border-radius: 16px;
-  background: var(--anzhiyu-card-bg);
-}
-
-.zy-sites-hero h1 {
-  margin: 0 0 8px;
-  font-size: 1.9rem;
-}
-
-.zy-sites-hero p {
-  margin: 0;
-  color: var(--anzhiyu-secondtext);
-}
-
-.zy-sites-section {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.zy-sites-section h2 {
-  margin: 0;
-  font-size: 1.15rem;
-}
-
-.zy-sites-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 12px;
-}
-
-.zy-site-card {
-  display: block;
-  text-decoration: none;
-  border: var(--style-border-always);
-  border-radius: 14px;
-  padding: 14px;
-  background: color-mix(in srgb, var(--anzhiyu-card-bg) 86%, transparent);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-}
-
-.zy-site-card h3 {
-  margin: 0 0 8px;
-  font-size: 1rem;
-  color: var(--anzhiyu-fontcolor);
-}
-
-.zy-site-card p {
-  margin: 0;
-  font-size: .92rem;
-  line-height: 1.55;
-  color: var(--anzhiyu-secondtext);
-}
-
-.zy-site-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--anzhiyu-main);
-  box-shadow: var(--anzhiyu-shadow-main);
-}
-
-.zy-sites-update {
-  margin: 4px 0 0;
-  font-size: .88rem;
-  color: var(--anzhiyu-secondtext);
-  text-align: right;
-}
-
-@media screen and (max-width: 768px) {
-  .zy-sites-hero {
-    padding: 14px;
-  }
-
-  .zy-sites-hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .zy-sites-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .zy-site-card {
-    padding: 12px;
-  }
-
-  .zy-sites-update {
-    text-align: left;
-  }
-}
-
-/* Sites page: share gallery style */
-.zy-share-page {
-  max-width: 1220px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.zy-share-head h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-.zy-share-head p {
-  margin: 6px 0 0;
-  color: var(--anzhiyu-secondtext);
-}
-
-.zy-share-filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 10px 0 4px;
-}
-
-.zy-share-filters button {
-  border: var(--style-border-always);
-  background: var(--anzhiyu-card-bg);
-  color: var(--anzhiyu-fontcolor);
-  border-radius: 999px;
-  padding: 6px 12px;
-  cursor: pointer;
-  transition: .2s ease;
-}
-
-.zy-share-filters button:hover,
-.zy-share-filters button.is-active {
-  color: #fff;
-  background: var(--anzhiyu-main);
-  border-color: var(--anzhiyu-main);
-  box-shadow: var(--anzhiyu-shadow-main);
-}
-
-.zy-share-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 12px;
-}
-
-.zy-share-card {
-  border: var(--style-border-always);
-  border-radius: 16px;
-  background: var(--anzhiyu-card-bg);
-  padding: 14px;
-  box-shadow: var(--anzhiyu-shadow-border);
-  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-}
-
-.zy-share-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--anzhiyu-main);
-  box-shadow: var(--anzhiyu-shadow-main);
-}
-
-.zy-share-card h3 {
-  margin: 0 0 8px;
-  font-size: 1.1rem;
-}
-
-.zy-share-card p {
-  margin: 0;
-  min-height: 42px;
-  color: var(--anzhiyu-secondtext);
-  line-height: 1.55;
-}
-
-.zy-share-meta {
-  margin-top: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.zy-share-meta span {
-  font-size: .85rem;
-  color: var(--anzhiyu-secondtext);
-}
-
-.zy-share-meta a {
-  text-decoration: none !important;
-  font-size: .86rem;
-  padding: 5px 10px;
-  border-radius: 10px;
-  border: 1px solid color-mix(in srgb, var(--anzhiyu-main) 40%, transparent);
-  background: color-mix(in srgb, var(--anzhiyu-main) 12%, transparent);
-}
-
-@media screen and (max-width: 768px) {
-  .zy-share-head h1 {
-    font-size: 1.65rem;
-  }
-  .zy-share-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* ----------------------------------------------------
    Palette tuning only (no layout/feature changes)
-   Cream + Plum + Sage + Warm Orange
+   Cloud Pop 2026: neutral base + vibrant accents
 ----------------------------------------------------- */
 [data-theme="light"] {
-  --anzhiyu-background: #f7f3ec;
-  --anzhiyu-card-bg: rgba(255, 255, 255, 0.72);
-  --anzhiyu-main: #6b5b73;
-  --anzhiyu-main-op: #6b5b73;
-  --anzhiyu-main-op-deep: #4b3f52;
-  --anzhiyu-main-none: rgba(107, 91, 115, 0);
-  --anzhiyu-blue: #8faf9b;
-  --zy-sage: #6aa985;
-  --zy-sage-soft: rgba(106, 169, 133, 0.22);
-  --anzhiyu-red: #d89c6a;
-  --anzhiyu-orange: #d89c6a;
-  --anzhiyu-fontcolor: #2f2a32;
-  --anzhiyu-secondtext: #7d737f;
-  --anzhiyu-lighttext: #8b8090;
-  --anzhiyu-border-op: rgba(107, 91, 115, 0.16);
-  --anzhiyu-shadow-main: 0 12px 26px rgba(75, 63, 82, 0.14);
-  --anzhiyu-shadow-border: 0 8px 20px rgba(75, 63, 82, 0.08);
+  --anzhiyu-background: #f7f8fa;
+  --anzhiyu-card-bg: rgba(255, 255, 255, 0.94);
+  --anzhiyu-main: #2563eb;
+  --anzhiyu-main-op: #2563eb;
+  --anzhiyu-main-op-deep: #1d4ed8;
+  --anzhiyu-main-none: rgba(37, 99, 235, 0);
+  --anzhiyu-blue: #7c3aed;
+  --zy-sage: #ec4899;
+  --zy-sage-soft: rgba(236, 72, 153, 0.18);
+  --anzhiyu-red: #f43f5e;
+  --anzhiyu-orange: #f43f5e;
+  --anzhiyu-fontcolor: #111827;
+  --anzhiyu-secondtext: #4b5563;
+  --anzhiyu-lighttext: #6b7280;
+  --anzhiyu-border-op: rgba(37, 99, 235, 0.2);
+  --anzhiyu-shadow-main: 0 12px 26px rgba(17, 24, 39, 0.12);
+  --anzhiyu-shadow-border: 0 8px 20px rgba(17, 24, 39, 0.08);
 }
 
 [data-theme="dark"] {
-  --anzhiyu-background: #1e1a22;
-  --anzhiyu-card-bg: rgba(38, 32, 44, 0.78);
-  --anzhiyu-main: #b9a6c9;
-  --anzhiyu-main-op: #b9a6c9;
-  --anzhiyu-main-op-deep: #8e78a1;
-  --anzhiyu-main-none: rgba(185, 166, 201, 0);
-  --anzhiyu-blue: #9bb8a5;
-  --zy-sage: #a9d4bb;
-  --zy-sage-soft: rgba(169, 212, 187, 0.24);
-  --anzhiyu-red: #e0a46f;
-  --anzhiyu-orange: #e0a46f;
-  --anzhiyu-fontcolor: #eee8f2;
-  --anzhiyu-secondtext: #b8afc0;
-  --anzhiyu-lighttext: #c8bfce;
+  --anzhiyu-background: #0f1115;
+  --anzhiyu-card-bg: rgba(23, 26, 33, 0.9);
+  --anzhiyu-main: #3b82f6;
+  --anzhiyu-main-op: #3b82f6;
+  --anzhiyu-main-op-deep: #2563eb;
+  --anzhiyu-main-none: rgba(59, 130, 246, 0);
+  --anzhiyu-blue: #a855f7;
+  --zy-sage: #ec4899;
+  --zy-sage-soft: rgba(236, 72, 153, 0.24);
+  --anzhiyu-red: #f43f5e;
+  --anzhiyu-orange: #f43f5e;
+  --anzhiyu-fontcolor: #e5e7eb;
+  --anzhiyu-secondtext: #9ca3af;
+  --anzhiyu-lighttext: #cbd5e1;
   --anzhiyu-border-op: rgba(255, 255, 255, 0.12);
   --anzhiyu-shadow-main: 0 14px 28px rgba(0, 0, 0, 0.3);
   --anzhiyu-shadow-border: 0 8px 22px rgba(0, 0, 0, 0.24);
@@ -604,16 +193,16 @@ select {
 /* Only visual tone: keep author/wechat card behaviors untouched */
 [data-theme="light"] #web_bg {
   background:
-    radial-gradient(circle at 8% 12%, rgba(216, 156, 106, 0.1), transparent 34%),
-    radial-gradient(circle at 86% 10%, rgba(143, 175, 155, 0.14), transparent 32%),
-    linear-gradient(180deg, #fbf8f2 0%, #f7f3ec 100%) !important;
+    radial-gradient(circle at 8% 12%, rgba(124, 58, 237, 0.1), transparent 34%),
+    radial-gradient(circle at 86% 10%, rgba(236, 72, 153, 0.1), transparent 32%),
+    linear-gradient(180deg, #fbfcff 0%, #f7f8fa 100%) !important;
 }
 
 [data-theme="dark"] #web_bg {
   background:
-    radial-gradient(circle at 10% 14%, rgba(185, 166, 201, 0.1), transparent 34%),
-    radial-gradient(circle at 86% 10%, rgba(155, 184, 165, 0.1), transparent 30%),
-    linear-gradient(180deg, #221d28 0%, #1e1a22 100%) !important;
+    radial-gradient(circle at 10% 14%, rgba(96, 165, 250, 0.14), transparent 34%),
+    radial-gradient(circle at 86% 10%, rgba(34, 211, 238, 0.1), transparent 30%),
+    linear-gradient(180deg, #111c33 0%, #0f172a 100%) !important;
 }
 
 [data-theme="light"] #aside-content .card-widget:not(.card-info):not(#card-wechat),
@@ -634,9 +223,9 @@ select {
 
 /* Stronger tone visibility (color only) */
 [data-theme="light"] {
-  --anzhiyu-main: #5d4a68;
-  --anzhiyu-main-op: #5d4a68;
-  --anzhiyu-main-op-deep: #3f3149;
+  --anzhiyu-main: #2563eb;
+  --anzhiyu-main-op: #2563eb;
+  --anzhiyu-main-op-deep: #1d4ed8;
 }
 
 [data-theme="light"] #aside-content .card-widget:not(.card-info):not(#card-wechat),
@@ -648,7 +237,7 @@ select {
 }
 
 [data-theme="light"] a {
-  color: #5d4a68;
+  color: #3b82f6;
 }
 
 [data-theme="light"] a:hover {
@@ -831,29 +420,52 @@ select {
   font-size: 0.92rem;
 }
 
-#zy-welcome-card .zy-text-strong {
+#zy-welcome-card .zy-text-strong,
+.zy-text-strong {
   color: #fff;
   font-weight: 700;
 }
 
-#zy-welcome-card .zy-text-blue {
+#zy-welcome-card .zy-text-blue,
+.zy-text-blue {
   color: #57a9ff;
   font-weight: 600;
 }
 
-#zy-welcome-card .zy-text-green {
-  color: #56d39f;
+#zy-welcome-card .zy-text-green,
+.zy-text-green {
+  color: #ff6bb3;
   font-weight: 600;
 }
 
-#zy-welcome-card .zy-text-purple {
+#zy-welcome-card .zy-text-purple,
+.zy-text-purple {
   color: #b38cff;
   font-weight: 600;
 }
 
-#zy-welcome-card .zy-text-pink {
+#zy-welcome-card .zy-text-pink,
+.zy-text-pink {
   color: #ff93d2;
   font-weight: 600;
+}
+
+.zy-text-yellow {
+  color: #ffd84d;
+  font-weight: 600;
+}
+
+[data-theme="light"] .zy-text-strong {
+  color: #111827;
+}
+
+[data-theme="dark"] .zy-text-strong,
+[data-theme="dark"] .zy-text-blue,
+[data-theme="dark"] .zy-text-green,
+[data-theme="dark"] .zy-text-purple,
+[data-theme="dark"] .zy-text-pink,
+[data-theme="dark"] .zy-text-yellow {
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.28);
 }
 
 #zy-welcome-card .zy-ip-blur {
@@ -865,4 +477,5 @@ select {
 #zy-welcome-card .zy-ip-blur:hover {
   filter: blur(0);
 }
+
 

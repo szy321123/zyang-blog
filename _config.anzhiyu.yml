@@ -282,10 +282,10 @@ post_copyright:
 reward:
   enable: true
   QR_code:
-    - img: https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png
+    - img: /img/reward/qrcode-weichat.png
       link:
       text: 微信
-    - img: https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png
+    - img: /img/reward/qrcode-alipay.png
       link:
       text: 支付宝
 
@@ -359,7 +359,7 @@ comments:
   card_post_count: false # Display comment count in Home Page
 
   twikoo:
-    envId: https://twikoo-steel-two.vercel.app
+    envId: https://zyang.me/twikoo/
     region:
     visitor: false
 # valine
@@ -400,7 +400,7 @@ waline:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId: https://twikoo-steel-two.vercel.app
+  envId: https://zyang.me/twikoo/
   region:
   visitor: true
   option:
@@ -474,19 +474,19 @@ footer:
   runtime:
     enable: false
     launch_time: 04/24/2026 00:00:00
-    work_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg
+    work_img: /img/badge/work.svg
     work_description: 小破站已稳定运行
-    offduty_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-下班啦.svg
+    offduty_img: /img/badge/offduty.svg
     offduty_description: 小破站已稳定运行
 
   bdageitem:
     enable: false
     list:
       - link: https://hexo.io/
-        shields: https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg
+        shields: /img/badge/frame-hexo.svg
         message: 博客框架为 Hexo
       - link: https://hexo.anheyu.com/
-        shields: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg
+        shields: /img/badge/theme-anzhiyu.svg
         message: 本站使用 AnZhiYu 主题
       - link: https://github.com/szy321123
         shields: https://img.shields.io/badge/GitHub-szy321123-181717?style=flat&logo=github
@@ -852,7 +852,7 @@ preloader:
   source: 3
   # pace theme (see https://codebyzach.github.io/pace/)
   pace_css_url:
-  avatar: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg # 自定加载动画义头像
+  avatar: /img/preloader-avatar.jpg # 自定加载动画义头像
 
 # aside (侧边栏)
 # --------------------------------------
@@ -1327,7 +1327,7 @@ inject:
     - <link rel="stylesheet" href="/css/custom-font.css">
     - <link rel="stylesheet" href="/css/custom-preloader.css">
     - <link rel="stylesheet" href="/css/hero-lottie.css">
-    - <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    - <script src="/vendor/lottie/lottie.min.js"></script>
 
   bottom:
     - <script src="/js/custom-preloader.js"></script>
@@ -1422,3 +1422,4 @@ CDN:
     # ali_iconfont_css:
     # accesskey_js:
     # colorthief:
+

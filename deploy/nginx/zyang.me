@@ -1,0 +1,16 @@
+server {
+    # 示例 server 配置（请按需合并到 /etc/nginx/sites-available/zyang.me）
+    listen 80;
+    server_name zyang.me www.zyang.me;
+
+    # Twikoo 反向代理
+    location /twikoo/ {
+        proxy_pass http://127.0.0.1:8080/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    # 其他位置配置请按你现有配置合并
+}

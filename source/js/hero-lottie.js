@@ -5,6 +5,8 @@ const HERO_LOTTIE = {
 };
 
 (function () {
+  "use strict";
+
   if (window.__zyHeroLottieBound) return;
   window.__zyHeroLottieBound = true;
 

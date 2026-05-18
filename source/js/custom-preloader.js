@@ -1,4 +1,6 @@
 (function () {
+  "use strict";
+
   if (window.__zyPreloaderBound) return;
   window.__zyPreloaderBound = true;
 
@@ -6,6 +8,7 @@
   var stopTimer = null;
   var fallbackCloseTimer = null;
   var firstLoadCloseTimer = null;
+  var pjaxCloseTimer = null;
   var PRELOADER_JSON = "/json/running-cat.json";
 
   function ensureLottie() {
@@ -67,11 +70,10 @@
 
   function bootPreloader() {
     showPreloader();
-
     window.addEventListener("load", function () {
       if (firstLoadCloseTimer) clearTimeout(firstLoadCloseTimer);
       firstLoadCloseTimer = setTimeout(closePreloader, 1800);
-    });
+    }, { once: true });
 
     if (fallbackCloseTimer) clearTimeout(fallbackCloseTimer);
     fallbackCloseTimer = setTimeout(closePreloader, 6000);
@@ -88,6 +90,7 @@
   });
 
   document.addEventListener("pjax:complete", function () {
-    setTimeout(closePreloader, 900);
+    if (pjaxCloseTimer) clearTimeout(pjaxCloseTimer);
+    pjaxCloseTimer = setTimeout(closePreloader, 900);
   });
 })();
