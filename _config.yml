@@ -57,7 +57,7 @@ prismjs:
 
 # Search
 search:
-  path: /search.xml
+  path: search.xml
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')

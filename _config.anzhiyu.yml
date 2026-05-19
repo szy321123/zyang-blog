@@ -149,7 +149,7 @@ local_search:
 
 # Hexo search output path
 search:
-  path: /search.xml
+  path: search.xml
 
 # Math (数学)
 # --------------------------------------

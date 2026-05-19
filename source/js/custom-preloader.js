@@ -35,6 +35,8 @@
     loadingBox = document.createElement("div");
     loadingBox.id = "loading-box";
     loadingBox.innerHTML =
+      '<div class="door-panel door-left"></div>' +
+      '<div class="door-panel door-right"></div>' +
       '<div class="spinner-box">' +
       '<div class="preloader-scene"><div id="preloader-lottie" class="preloader-lottie"></div></div>' +
       '<div class="loading-text">Loading...</div>' +

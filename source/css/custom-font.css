@@ -1,31 +1,27 @@
 :root {
-  --zy-font-sans: "Yozai Medium", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --zy-font-body: "LXGW WenKai", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --zy-font-ui: "Ysabeau", "PingFang SC", "Microsoft YaHei", sans-serif;
   --zy-font-mono: Consolas, "Cascadia Code", "JetBrains Mono", Monaco, "Courier New", monospace;
 }
 
 body,
-#body-wrap,
-#nav,
-#aside-content,
-#footer,
-button,
 input,
 select,
 textarea {
-  font-family: var(--zy-font-sans) !important;
+  font-family: var(--zy-font-body) !important;
+}
+
+#nav,
+.card-widget,
+button,
+.article-meta,
+.post-meta {
+  font-family: var(--zy-font-ui) !important;
 }
 
 #site-title,
-#site-subtitle,
-.article-title,
-#article-container h1,
-#article-container h2,
-#article-container h3,
-#article-container h4,
-#article-container h5,
-#article-container h6,
-#aside-content .item-headline span {
-  font-family: var(--zy-font-sans) !important;
+#site-subtitle {
+  font-family: var(--zy-font-ui) !important;
 }
 
 code,
