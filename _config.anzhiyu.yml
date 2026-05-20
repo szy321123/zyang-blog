@@ -1322,6 +1322,8 @@ dynamicEffect:
 
 inject:
   head:
+    - <link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css" media="print" onload="this.media='all'">
+    - <link rel="stylesheet" href="/vendor/anzhiyu-icon/ali_iconfont_css.css">
     - <link rel="stylesheet" href="/css/custom.css">
     - <link rel="stylesheet" href="/fonts/yozai-medium.css?v=20260501">
     - <link rel="stylesheet" href="/css/custom-font.css">
@@ -1400,7 +1402,7 @@ CDN:
     # fireworks:
     # click_heart:
     ClickShowText: /js/click-show-text.min.js
-    # fontawesome:
+    fontawesome: /vendor/fontawesome/css/all.min.css
     # flickr_justified_gallery_js:
     # flickr_justified_gallery_css:
     # aplayer_css:
@@ -1419,7 +1421,7 @@ CDN:
     # busuanzi:
     # rightmenu:
     # waterfall:
-    # ali_iconfont_css:
+    ali_iconfont_css: /vendor/anzhiyu-icon/ali_iconfont_css.css
     # accesskey_js:
     # colorthief:
 
