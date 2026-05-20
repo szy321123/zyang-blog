@@ -1,0 +1,106 @@
+- name: ZYang
+  subtitle: 喜欢折腾与分享
+  avatarImg: /img/touxiang.webp
+  description: 一边记录，一边成长。
+  helloAbout: 你好，很高兴在这里遇见你
+
+  avatarSkills:
+    left:
+      - ☕ 喜欢咖啡
+      - 🛠 爱折腾
+    right:
+      - 📷 记录生活
+      - 🎵 听歌写文
+
+  aboutsiteTips:
+    tips: 追求
+    title1: 源于
+    title2: 热爱而去创造
+    word:
+      - 分享经验
+      - 沉淀知识
+      - 保持好奇
+      - 持续行动
+
+  skillsTips:
+    tips: 技能
+    title: 开启创造力
+
+  careers:
+    tips: 生涯
+    title: 无限进步
+    img: /img/covers/posts/cover9.webp
+    list:
+      - desc: 学习中
+        color: "#357ef5"
+      - desc: 持续输出
+        color: "#e77c8e"
+      - desc: 长期主义
+        color: "#6bc30d"
+
+  statistic:
+    cover: /img/covers/posts/cover10.webp
+    link: /archives/
+    text: 查看文章
+
+  map:
+    title: 我现在住在
+    StrengthenTitle: 中国，安徽省芜湖市
+    background: /img/covers/posts/cover11.webp
+    backgroundDark: /img/covers/posts/cover12.webp
+
+  selfInfo:
+    selfInfoTips1: 生于
+    selfInfoContentYear: 2004
+    selfInfoTips2: 太空人
+    selfInfoContent2: 水瓶座
+    selfInfoTips3: 职业
+    selfInfoContent3: 前端初学爱好者
+
+  personalities:
+    author_name: ZYang
+    personality_type: INTP-A
+    personality_type_color: "#56a178"
+    photo_url: /img/touxiang.webp
+    personality_img: /img/covers/posts/cover13.webp
+    name_url: https://github.com/szy321123
+
+  maxim:
+    maxim_tips: 座右铭
+    maxim_top: 慢一点没关系
+    maxim_bottom: 每天都比昨天更会一点
+
+  buff:
+    buff_tips: 特长
+    buff_top: 脑洞和执行力
+    buff_bottom: 越做越顺手
+
+  game:
+    game_tips: 爱好游戏
+    game_title: 三角洲 & 洛克王国世界
+    game_uid: ""
+    game_bg: /img/covers/posts/cover14.webp
+
+  comic:
+    comic_tips: 常玩游戏
+    comic_title: 近期在玩的
+    comic_list:
+      - name: 三角洲行动
+        href: https://df.qq.com/
+        cover: /img/covers/posts/cover19.webp
+      - name: 洛克王国世界
+        href: https://roco.qq.com/
+        cover: /img/covers/posts/cover20.webp
+
+  like:
+    like_tips: 关注偏好
+    like_title: 前端实战与效率工具
+    like_bottom: 关注好上手、可复用、能落地的前端方案与实用工具
+    like_bg: /img/covers/posts/cover17.webp
+
+  music:
+    music_tips: 音乐偏好
+    music_title: 常听歌单
+    music_link: /music/
+    music_bg: /img/covers/posts/cover18.webp
+
