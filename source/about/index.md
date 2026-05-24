@@ -1,5 +1,5 @@
 ---
-title: about
+title: 关于我
 date: 2026-05-08 14:41:34
 class_name: about
 type: about

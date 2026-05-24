@@ -20,6 +20,7 @@ menu:
     我的设备: /equipment/ || fas fa-laptop
     
     关于我: /about/ || fas fa-circle-info
+    音乐馆: /music/?id=8152976493&server=netease || fas fa-music
   # 闲言碎语: /essay/ || anzhiyu-icon-lightbulb
   # 友链:
   #   友人帐: /link/ || anzhiyu-icon-link
@@ -40,7 +41,7 @@ nav:
     item:
       - name: 首页
         link: /
-        icon: /img/favicon.ico
+        icon: /img/touxiang.webp
       - name: GitHub
         link: https://github.com/szy321123
         icon: /img/skills/github.svg
@@ -49,10 +50,10 @@ nav:
     item:
       - name: 工具
         link: /tools/
-        icon: /img/favicon.ico
+        icon: /img/touxiang.webp
       - name: 分享
         link: /sites/
-        icon: /img/favicon.ico
+        icon: /img/touxiang.webp
 
   - title: 参考
     item:
@@ -173,7 +174,7 @@ katex:
 # --------------------------------------
 
 # Favicon（网站图标）
-favicon: /favicon.ico
+favicon: /img/touxiang.webp
 
 # Avatar (头像)
 avatar:
@@ -852,7 +853,7 @@ preloader:
   source: 3
   # pace theme (see https://codebyzach.github.io/pace/)
   pace_css_url:
-  avatar: /img/preloader-avatar.jpg # 自定加载动画义头像
+  avatar: /img/touxiang.webp # 自定义加载动画头像
 
 # aside (侧边栏)
 # --------------------------------------
@@ -1140,6 +1141,7 @@ home_top:
     title: ZYang
     image: img/banner/cover0.webp
     link: https://docs.anheyu.com/
+    top_group_banner_css: /css/custom.css
 
 # 朋友圈配置
 friends_vue:
@@ -1207,7 +1209,7 @@ nav_music:
   all_playlist: https://y.qq.com/n/ryqq/playlist/8802438608
 
 # 路径为 /music 的音乐页面默认加载的歌单 1. nav_music 2. custom
-music_page_default: nav_music
+music_page_default: custom
 
 # 评论匿名邮箱
 visitorMail:
