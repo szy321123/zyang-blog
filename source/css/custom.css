@@ -1022,4 +1022,108 @@ select {
   }
 }
 
+/* Music page: custom static background with transparent page shell */
+body[data-type="music"] #an_music_bg {
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+  background:
+    linear-gradient(90deg, rgba(10, 12, 16, 0.56), rgba(31, 35, 48, 0.28) 45%, rgba(8, 10, 14, 0.68)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(0, 0, 0, 0.24)),
+    url("/img/covers/posts/cover15.webp") center center / cover no-repeat fixed !important;
+}
+
+body[data-type="music"] #page {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Equipment page: use the former top banner image as the page background */
+body[data-type="equipment"] #web_bg {
+  background:
+    linear-gradient(180deg, rgba(247, 248, 250, 0.7), rgba(247, 248, 250, 0.9)),
+    url("/img/covers/posts/cover7.webp") center center / cover no-repeat fixed !important;
+}
+
+body[data-type="equipment"] #equipment > .author-content.fcirclePage.single {
+  display: none !important;
+}
+
+body[data-type="equipment"] #page {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body[data-type="equipment"] .goodthings-title,
+body[data-type="equipment"] .goodthings-item-description {
+  text-shadow: 0 1px 10px rgba(255, 255, 255, 0.78);
+}
+
+body[data-type="equipment"] .equipment-item .equipment-item-content .equipment-item-content-item {
+  background: rgba(255, 255, 255, 0.26) !important;
+  backdrop-filter: blur(12px) saturate(130%);
+  -webkit-backdrop-filter: blur(12px) saturate(130%);
+}
+
+body[data-type="equipment"] .equipment-item .equipment-item-content {
+  justify-content: center !important;
+}
+
+body[data-type="equipment"] .equipment-item .equipment-item-content .equipment-item-content-item-cover {
+  background: transparent !important;
+}
+
+body[data-type="equipment"] .equipment-item .equipment-item-content .equipment-item-content-item-info {
+  background: transparent !important;
+}
+
+body[data-type="equipment"] .equipment-item .equipment-item-content .equipment-item-content-item-name {
+  color: rgba(17, 24, 39, 0.94) !important;
+  text-shadow: 0 1px 10px rgba(255, 255, 255, 0.72);
+}
+
+body[data-type="equipment"] .equipment-item .equipment-item-content .equipment-item-content-item-specification,
+body[data-type="equipment"] .equipment-item .equipment-item-content .equipment-item-content-item-description {
+  color: rgba(31, 41, 55, 0.78) !important;
+  text-shadow: 0 1px 10px rgba(255, 255, 255, 0.68);
+}
+
+body[data-type="equipment"] .equipment-item .equipment-item-content a.equipment-item-content-item-link {
+  background: rgba(255, 255, 255, 0.46) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+[data-theme="dark"] body[data-type="equipment"] #web_bg {
+  background:
+    linear-gradient(180deg, rgba(15, 17, 21, 0.58), rgba(15, 17, 21, 0.86)),
+    url("/img/covers/posts/cover7.webp") center center / cover no-repeat fixed !important;
+}
+
+[data-theme="dark"] body[data-type="equipment"] .goodthings-title,
+[data-theme="dark"] body[data-type="equipment"] .goodthings-item-description {
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.62);
+}
+
+[data-theme="dark"] body[data-type="equipment"] .equipment-item .equipment-item-content .equipment-item-content-item {
+  background: rgba(23, 26, 33, 0.34) !important;
+}
+
+[data-theme="dark"] body[data-type="equipment"] .equipment-item .equipment-item-content .equipment-item-content-item-name {
+  color: rgba(255, 255, 255, 0.94) !important;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.58);
+}
+
+[data-theme="dark"] body[data-type="equipment"] .equipment-item .equipment-item-content .equipment-item-content-item-specification,
+[data-theme="dark"] body[data-type="equipment"] .equipment-item .equipment-item-content .equipment-item-content-item-description {
+  color: rgba(255, 255, 255, 0.76) !important;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.58);
+}
+
 
