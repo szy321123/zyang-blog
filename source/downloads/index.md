@@ -1,6 +1,7 @@
 ---
 title: 下载中心
 date: 2026-05-08 14:41:29
+type: downloads
 description: 汇总 zyang.app OpenList 下载站公开文件，点击即可前往下载。
 top_img: false
 ---

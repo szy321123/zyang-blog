@@ -1326,16 +1326,13 @@ inject:
   head:
     - <link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css" media="print" onload="this.media='all'">
     - <link rel="stylesheet" href="/vendor/anzhiyu-icon/ali_iconfont_css.css">
-    - <link rel="stylesheet" href="/css/custom.css">
+    - <link rel="stylesheet" href="/css/custom.css?v=20260530-cover23-fixedbg">
     - <link rel="stylesheet" href="/fonts/yozai-medium.css?v=20260501">
     - <link rel="stylesheet" href="/css/custom-font.css">
     - <link rel="stylesheet" href="/css/custom-preloader.css">
-    - <link rel="stylesheet" href="/css/hero-lottie.css">
-    - <script src="/vendor/lottie/lottie.min.js"></script>
 
   bottom:
     - <script src="/js/custom-preloader.js"></script>
-    - <script src="/js/hero-lottie.js"></script>
     - <script src="/js/author-social.js"></script>
     - <script src="/js/welcome-card.js"></script>
     

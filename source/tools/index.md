@@ -9,9 +9,16 @@ top_img: false
 
 <div class="tools-center">
 <section class="tools-hero">
+<div>
 <span class="tools-eyebrow">ZYang Tools</span>
 <h2>在线工具箱</h2>
 <p>把常用的小工具收在这里，处理图片、生成二维码，少开几个标签页，日常写作和分享会顺手一点。</p>
+</div>
+<div class="tools-hero-badges">
+<span><i class="fa-solid fa-bolt"></i> 快速</span>
+<span><i class="fa-solid fa-wand-magic-sparkles"></i> 轻量</span>
+<span><i class="fa-solid fa-shield-halved"></i> 本站</span>
+</div>
 </section>
 <section class="tools-grid" aria-label="在线工具">
 <a class="tools-card" href="https://zyang.me/tools/image-converter" target="_blank" rel="noopener noreferrer">
