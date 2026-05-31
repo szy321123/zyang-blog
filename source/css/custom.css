@@ -1127,14 +1127,20 @@ body[data-type="equipment"] .equipment-item .equipment-item-content a.equipment-
 }
 
 /* Home page background */
+body[data-type="anzhiyu"] {
+  --zy-home-cover-image: url("/img/covers/posts/cover23.webp");
+  --zy-home-cover-position: center top;
+  --zy-home-cover-size: 100% auto;
+}
+
 body[data-type="anzhiyu"] #web_bg {
   top: 0 !important;
   left: 0 !important;
   width: 100% !important;
   height: 100% !important;
   background:
-    linear-gradient(180deg, rgba(247, 248, 250, 0.14), rgba(247, 248, 250, 0.62)),
-    url("/img/covers/posts/cover23.webp") center top / 100% auto no-repeat scroll !important;
+    linear-gradient(180deg, rgba(247, 248, 250, 0.08), rgba(247, 248, 250, 0.36)),
+    var(--zy-home-cover-image) var(--zy-home-cover-position) / var(--zy-home-cover-size) no-repeat scroll !important;
 }
 
 [data-theme="dark"] body[data-type="anzhiyu"] #web_bg {
@@ -1143,8 +1149,8 @@ body[data-type="anzhiyu"] #web_bg {
   width: 100% !important;
   height: 100% !important;
   background:
-    linear-gradient(180deg, rgba(15, 17, 21, 0.22), rgba(15, 17, 21, 0.78)),
-    url("/img/covers/posts/cover23.webp") center top / 100% auto no-repeat scroll !important;
+    linear-gradient(180deg, rgba(15, 17, 21, 0.16), rgba(15, 17, 21, 0.52)),
+    var(--zy-home-cover-image) var(--zy-home-cover-position) / var(--zy-home-cover-size) no-repeat scroll !important;
 }
 
 #page-header.full_page {
@@ -1158,15 +1164,16 @@ body[data-type="anzhiyu"] #web_bg {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: url("/img/index-top-white.png") center center / cover no-repeat;
-  opacity: .48;
-  backdrop-filter: blur(8px) saturate(112%);
-  -webkit-backdrop-filter: blur(8px) saturate(112%);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.28));
+  backdrop-filter: blur(6px) saturate(108%);
+  -webkit-backdrop-filter: blur(6px) saturate(108%);
   pointer-events: none;
 }
 
 [data-theme="dark"] #page-header.full_page::before {
-  opacity: .38;
+  background:
+    linear-gradient(180deg, rgba(12, 15, 22, 0.18), rgba(12, 15, 22, 0.42));
 }
 
 #page-header.full_page #site-info {

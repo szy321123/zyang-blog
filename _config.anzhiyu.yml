@@ -185,7 +185,7 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: "background: url(/img/index-top-white.png) center / cover no-repeat" # "background: url() top / cover no-repeat"
+index_img: "background: url(/img/covers/posts/cover23.webp) center / cover no-repeat" # "background: url() top / cover no-repeat"
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: false
@@ -1139,7 +1139,7 @@ home_top:
   banner:
     tips: 欢迎来到我的小站~
     title: ZYang
-    image: img/banner/cover0.webp
+    image: img/covers/posts/cover25.webp
     link: https://docs.anheyu.com/
     top_group_banner_css: /css/custom.css
 
@@ -1326,7 +1326,7 @@ inject:
   head:
     - <link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css" media="print" onload="this.media='all'">
     - <link rel="stylesheet" href="/vendor/anzhiyu-icon/ali_iconfont_css.css">
-    - <link rel="stylesheet" href="/css/custom.css?v=20260530-cover23-fixedbg">
+    - <link rel="stylesheet" href="/css/custom.css?v=20260531-cover23-seamless">
     - <link rel="stylesheet" href="/fonts/yozai-medium.css?v=20260501">
     - <link rel="stylesheet" href="/css/custom-font.css">
     - <link rel="stylesheet" href="/css/custom-preloader.css">
