@@ -1326,7 +1326,7 @@ inject:
   head:
     - <link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css" media="print" onload="this.media='all'">
     - <link rel="stylesheet" href="/vendor/anzhiyu-icon/ali_iconfont_css.css">
-    - <link rel="stylesheet" href="/css/custom.css?v=20260531-cover23-seamless">
+    - <link rel="stylesheet" href="/css/custom.css?v=20260601-cover23-responsive">
     - <link rel="stylesheet" href="/fonts/yozai-medium.css?v=20260501">
     - <link rel="stylesheet" href="/css/custom-font.css">
     - <link rel="stylesheet" href="/css/custom-preloader.css">
