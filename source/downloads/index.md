@@ -4,6 +4,7 @@ date: 2026-05-08 14:41:29
 type: downloads
 description: 汇总 zyang.app OpenList 下载站公开文件，点击即可前往下载。
 top_img: false
+comments: false
 ---
 
 这里汇总我的 OpenList 下载站公开文件，文件由 [zyang.app](https://zyang.app/) 托管。

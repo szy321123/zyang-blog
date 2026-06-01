@@ -5,6 +5,7 @@ type: sites
 aside: false
 description: 收藏一些平时常用、觉得不错的网站与工具 ✨
 top_img: false
+comments: false
 ---
 
 <div class="sites-center" data-sites-root>

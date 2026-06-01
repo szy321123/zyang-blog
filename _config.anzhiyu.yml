@@ -843,7 +843,7 @@ subtitle:
     # - 生活明朗&#44;万物可爱&#44;人间值得&#44;未来可期.
 
 # Loading Animation (加载动画)
-# Disabled: Using custom preloader instead
+# Disabled
 preloader:
   enable: false
   # source
@@ -914,9 +914,9 @@ aside:
 # busuanzi count for PV / UV in site
 # 访问人数
 busuanzi:
-  site_uv: true
-  site_pv: true
-  page_pv: true
+  site_uv: false
+  site_pv: false
+  page_pv: false
 
 # Time difference between publish date and now (网页运行时间)
 # Formal: Month/Day/Year Time or Year/Month/Day Time
@@ -1329,10 +1329,8 @@ inject:
     - <link rel="stylesheet" href="/css/custom.css?v=20260601-cover23-responsive">
     - <link rel="stylesheet" href="/fonts/yozai-medium.css?v=20260501">
     - <link rel="stylesheet" href="/css/custom-font.css">
-    - <link rel="stylesheet" href="/css/custom-preloader.css">
 
   bottom:
-    - <script src="/js/custom-preloader.js"></script>
     - <script src="/js/author-social.js"></script>
     - <script src="/js/welcome-card.js"></script>
     

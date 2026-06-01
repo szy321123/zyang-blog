@@ -5,6 +5,7 @@ type: tools
 aside: false
 description: 收藏一些自己常用的小工具与实用页面 ✨
 top_img: false
+comments: false
 ---
 
 <div class="tools-center">

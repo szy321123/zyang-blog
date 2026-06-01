@@ -5,7 +5,7 @@
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
-    "deploy": "hexo deploy",
+    "deploy": "node -e \"console.log('Deployment is handled via git push origin main; no Hexo deployer is configured.')\"",
     "server": "hexo server",
     "sync:openlist": "node tools/sync-openlist-downloads.mjs"
   },
