@@ -914,15 +914,15 @@ aside:
 # busuanzi count for PV / UV in site
 # 访问人数
 busuanzi:
-  site_uv: false
-  site_pv: false
-  page_pv: false
+  site_uv: true
+  site_pv: true
+  page_pv: true
 
 # Time difference between publish date and now (网页运行时间)
 # Formal: Month/Day/Year Time or Year/Month/Day Time
 runtimeshow:
   enable: true
-  publish_date: 4/1/2021 00:00:00
+  publish_date: 2026/04/20 00:00:00
 
 # Console - Newest Comments
 newest_comments:
@@ -1415,7 +1415,7 @@ CDN:
     # pace_default_css:
     # countup_js:
     # gsap_js:
-    # busuanzi:
+    busuanzi: https://api.busuanzi.cc/static/3.6.9/busuanzi.min.js
     # rightmenu:
     # waterfall:
     ali_iconfont_css: /vendor/anzhiyu-icon/ali_iconfont_css.css
