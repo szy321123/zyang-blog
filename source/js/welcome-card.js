@@ -2,11 +2,14 @@
   "use strict";
 
   const CARD_ID = "zy-welcome-card";
+  const CACHE_KEY = "zy-welcome-card-cache";
+  const CACHE_TTL = 1000 * 60 * 60 * 12;
   const BLOGGER = {
     city: "安徽·芜湖",
     lat: 31.3525,
     lon: 118.4331
   };
+  let pendingRequest = null;
 
   function getGreetingByTime() {
     const hour = new Date().getHours();
@@ -72,6 +75,39 @@
     el.appendChild(span);
   }
 
+  function readCache() {
+    try {
+      const raw = sessionStorage.getItem(CACHE_KEY);
+      if (!raw) return null;
+      const parsed = JSON.parse(raw);
+      if (!parsed || !parsed.data || !parsed.expiresAt) return null;
+      if (Date.now() > parsed.expiresAt) {
+        sessionStorage.removeItem(CACHE_KEY);
+        return null;
+      }
+      return parsed.data;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function writeCache(data) {
+    try {
+      sessionStorage.setItem(CACHE_KEY, JSON.stringify({
+        data,
+        expiresAt: Date.now() + CACHE_TTL
+      }));
+    } catch (_) {
+      // ignore storage write failures
+    }
+  }
+
+  function createTimeoutSignal(ms) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), ms);
+    return { signal: controller.signal, cancel: () => clearTimeout(timer) };
+  }
+
   async function fetchIpInfo() {
     const endpoints = [
       "https://ipapi.co/json/",
@@ -79,20 +115,40 @@
     ];
 
     for (const url of endpoints) {
-      const controller = new AbortController();
-      const timer = setTimeout(() => controller.abort(), 4500);
+      const timeout = createTimeoutSignal(2200);
       try {
-        const res = await fetch(url, { method: "GET", signal: controller.signal });
+        const res = await fetch(url, {
+          method: "GET",
+          cache: "no-store",
+          signal: timeout.signal
+        });
         if (!res.ok) continue;
         const data = await res.json();
         if (data) return data;
       } catch (_) {
         // try next endpoint
       } finally {
-        clearTimeout(timer);
+        timeout.cancel();
       }
     }
     return null;
+  }
+
+  async function getIpInfo() {
+    const cached = readCache();
+    if (cached) return cached;
+    if (pendingRequest) return pendingRequest;
+
+    pendingRequest = fetchIpInfo()
+      .then((data) => {
+        if (data) writeCache(data);
+        return data;
+      })
+      .finally(() => {
+        pendingRequest = null;
+      });
+
+    return pendingRequest;
   }
 
   function updateIpInfo(data) {
@@ -132,19 +188,33 @@
     setMaskedValue(ipEl, "🌐 你的网络 IP：", ip);
   }
 
-  async function mountWelcomeCard() {
-    const wechatCard = document.querySelector("#card-wechat");
-    if (!wechatCard) return;
+  function findAnchorCard() {
+    return (
+      document.querySelector(".card-widget.card-info") ||
+      document.querySelector("#card-wechat") ||
+      document.querySelector("#aside-content .card-widget")
+    );
+  }
+
+  function mountWelcomeCard() {
+    const anchorCard = findAnchorCard();
+    if (!anchorCard) return null;
 
     const oldCard = document.getElementById(CARD_ID);
     if (oldCard) oldCard.remove();
 
     const card = createCard();
-    wechatCard.insertAdjacentElement("afterend", card);
-    const data = await fetchIpInfo();
+    anchorCard.insertAdjacentElement("afterend", card);
+    return card;
+  }
+
+  async function hydrateWelcomeCard() {
+    const card = mountWelcomeCard();
+    if (!card) return;
+    const data = await getIpInfo();
     updateIpInfo(data);
   }
 
-  document.addEventListener("DOMContentLoaded", mountWelcomeCard);
-  document.addEventListener("pjax:complete", mountWelcomeCard);
+  document.addEventListener("DOMContentLoaded", hydrateWelcomeCard);
+  document.addEventListener("pjax:complete", hydrateWelcomeCard);
 })();
